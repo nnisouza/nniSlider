@@ -1,0 +1,108 @@
+.nniSlider {
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+.nniSlider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nniSlider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+/*    the slider dimension    */
+    width: 720px;
+    height: 480px;
+}
+
+.nniSlider ul li.active {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.nni_prev,
+.nni_next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: block;
+    width: auto;
+    height: 50px;
+    background: #2a2a2a;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    border: 0;
+    width: 50px;
+    
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.nni_prev {border-radius: 0 2px 2px 0;}
+.nni_next {right: 0;border-radius: 2px 0 0 2px;}
+
+
+
+
+.withLabel ul li .label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.66);
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+}
+.withLabel ul li.active .label{
+    transform: translateY(0);
+}
+.withLabel ul li .label p{
+    font-family: Verdana;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+
+
+
+.middleText ul li .holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.middleText ul li .holder p{
+    font-family: Verdana;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 0 0 60px;
+    margin: 0;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 0.4s cubic-bezier(.11, 1.07, .56, .94);
+    text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.49);
+}
+.middleText ul li.active .holder p{
+    transform: translateX(0);
+    opacity: 1;
+}
